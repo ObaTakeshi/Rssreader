@@ -126,8 +126,6 @@ class LivtViewXmlParser: NSObject, XMLParserDelegate {
                 i.image = d
             }else{
             }
-        case "dc:subject":
-            i.categoly = currentString
         case "item": items.append(i)
         default: break
         }

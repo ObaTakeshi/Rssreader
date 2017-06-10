@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E013BA01EE7E92900128E44 /* CategolyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E013B9F1EE7E92900128E44 /* CategolyViewController.swift */; };
 		2E67495F1EE6417900CA47A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E67495E1EE6417900CA47A0 /* AppDelegate.swift */; };
 		2E6749641EE6417900CA47A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6749621EE6417900CA47A0 /* Main.storyboard */; };
 		2E6749661EE6417900CA47A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6749651EE6417900CA47A0 /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E013B9F1EE7E92900128E44 /* CategolyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategolyViewController.swift; sourceTree = "<group>"; };
 		2E67495B1EE6417900CA47A0 /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E67495E1EE6417900CA47A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E6749631EE6417900CA47A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				2E6749761EE6577D00CA47A0 /* DetailViewController.swift */,
 				2E6749781EE672AB00CA47A0 /* BookmarkViewController.swift */,
 				2E67497A1EE675C800CA47A0 /* Bookmark.swift */,
-				2E013B9F1EE7E92900128E44 /* CategolyViewController.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -236,7 +233,6 @@
 				2E67495F1EE6417900CA47A0 /* AppDelegate.swift in Sources */,
 				2E6749791EE672AB00CA47A0 /* BookmarkViewController.swift in Sources */,
 				2E67497B1EE675C800CA47A0 /* Bookmark.swift in Sources */,
-				2E013BA01EE7E92900128E44 /* CategolyViewController.swift in Sources */,
 				2E6749731EE64EA000CA47A0 /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

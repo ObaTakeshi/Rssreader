@@ -12,5 +12,4 @@ class Item {
     var detail = ""
     var link = ""
     var image = ""
-    var categoly = ""
 }
