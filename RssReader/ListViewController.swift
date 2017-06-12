@@ -16,6 +16,7 @@ class ListViewController: UITableViewController {
     
     var xml: LivtViewXmlParser?
     
+    //おそらくページのリロード
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -25,6 +26,7 @@ class ListViewController: UITableViewController {
         }
     }
     
+    //セルのタップ時に送るデータ
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let x = xml else {
             return
@@ -36,12 +38,15 @@ class ListViewController: UITableViewController {
         }
     }
     
+    //必須メソッド(戻り値はセルの数)
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return xml?.items.count ?? 0
     }
     
+    //必須メソッド(戻り値はセルの内容)　indexPathは現在設定しているセルの行番号を保持
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        //dequeue~Cellはセルの再利用(引数に再利用するセル(ストーリボードのIdentifer))
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as? ListViewCell else {
             fatalError("Invalid cell")
         }
@@ -57,6 +62,7 @@ class ListViewController: UITableViewController {
 }
 
 class ListViewCell: UITableViewCell {
+    //宣言の際クラス名に!をつけることで以後プロパティ名の使用に!を用いなくていい
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
@@ -72,45 +78,57 @@ class ListViewCell: UITableViewCell {
     }
 }
 
+//デリゲート
 class LivtViewXmlParser: NSObject, XMLParserDelegate {
     
+    //itemクラス型プロパティ
     var item: Item?
+    //複数記事を格納する配列
     var items = [Item]()
     var currentString = ""
     var completionHandler: (() -> ())?
     
     func parse(url: String, completionHandler: @escaping () -> ()) {
+        //URLの指定
         guard let url = URL(string: url) else {
             return
         }
+        //インスタンスの作成
         guard let xml_parser = XMLParser(contentsOf: url) else {
             return
         }
-        
+        //itemsを空にする
         items = []
+        //データ解析の開始
         self.completionHandler = completionHandler
         xml_parser.delegate = self
         xml_parser.parse()
     }
     
+    //要素名の開始タグが始まるごとに呼び出される
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
+        //currentStringを空にする
         currentString = ""
+        //要素名が"item"のデータのみ取得(elementNameにはデータの要素名が格納)
         if elementName == "item" {
             item = Item()
         }
     }
     
+    //タグで囲まれた中にデータがあると呼び出される
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         currentString += string
     }
     
+    //終了タグが見つかったとき呼び出される
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
         guard let i = item else {
             return
         }
         
+        //タグの種類でswitch
         switch elementName {
         case "title": i.title = currentString
         case "description": i.detail = currentString
@@ -126,11 +144,13 @@ class LivtViewXmlParser: NSObject, XMLParserDelegate {
                 i.image = d
             }else{
             }
+ 
         case "item": items.append(i)
         default: break
         }
     }
     
+    //Rssの解析が終了すると呼び出される
     func parserDidEndDocument(_ parser: XMLParser) {
         completionHandler?()
     }
