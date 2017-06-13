@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E210B161EEF73B100E64689 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E210B151EEF73B100E64689 /* CategoryViewController.swift */; };
+		2E210B1A1EEFD17800E64689 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E210B191EEFD17800E64689 /* FeedViewController.swift */; };
+		2E210B1C1EEFD71600E64689 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E210B1B1EEFD71600E64689 /* AddFeedViewController.swift */; };
 		2E67495F1EE6417900CA47A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E67495E1EE6417900CA47A0 /* AppDelegate.swift */; };
 		2E6749641EE6417900CA47A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6749621EE6417900CA47A0 /* Main.storyboard */; };
 		2E6749661EE6417900CA47A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6749651EE6417900CA47A0 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		2E210B151EEF73B100E64689 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		2E210B191EEFD17800E64689 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		2E210B1B1EEFD71600E64689 /* AddFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		2E67495B1EE6417900CA47A0 /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E67495E1EE6417900CA47A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E6749631EE6417900CA47A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				2E6749781EE672AB00CA47A0 /* BookmarkViewController.swift */,
 				2E67497A1EE675C800CA47A0 /* Bookmark.swift */,
 				2E210B151EEF73B100E64689 /* CategoryViewController.swift */,
+				2E210B191EEFD17800E64689 /* FeedViewController.swift */,
+				2E210B1B1EEFD71600E64689 /* AddFeedViewController.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -231,6 +237,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6749751EE64ECF00CA47A0 /* Item.swift in Sources */,
+				2E210B1A1EEFD17800E64689 /* FeedViewController.swift in Sources */,
+				2E210B1C1EEFD71600E64689 /* AddFeedViewController.swift in Sources */,
 				2E6749711EE643FF00CA47A0 /* ListViewController.swift in Sources */,
 				2E6749771EE6577D00CA47A0 /* DetailViewController.swift in Sources */,
 				2E67495F1EE6417900CA47A0 /* AppDelegate.swift in Sources */,

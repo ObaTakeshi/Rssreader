@@ -11,3 +11,8 @@ enum Setting {
     static let RssUrl = "http://feeds.feedburner.com/hatena/b/hotentry"
     static let RssUrl1 = "http://www3.nhk.or.jp/rss/news/cat0.xml"
 }
+
+class Feed{
+    var name = ""
+    var url = ""
+}
