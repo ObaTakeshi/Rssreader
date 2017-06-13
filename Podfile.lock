@@ -1,9 +1,4 @@
 PODS:
-  - Ji (2.0.1):
-    - Ji/Ji (= 2.0.1)
-  - Ji/Ji (2.0.1):
-    - Ji/Ji-libxml
-  - Ji/Ji-libxml (2.0.1)
   - PySwiftyRegex (1.0.0)
   - Realm (2.8.0):
     - Realm/Headers (= 2.8.0)
@@ -15,18 +10,16 @@ PODS:
   - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
-  - Ji (~> 2.0.1)
   - PySwiftyRegex
   - RealmSwift
   - SDWebImage
 
 SPEC CHECKSUMS:
-  Ji: 6bb602a28dd08b804158f64990e6051ed5de0110
   PySwiftyRegex: 9f53cc95dcc4b5c91f050487d6dba3e4aac298ed
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 3fe7d42c4589aa5c0387657067bc9f7e5530829a
+PODFILE CHECKSUM: 5e15495900b0e243148ed64bcd005963e0685108
 
 COCOAPODS: 1.0.1

@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Ji
 import SDWebImage
 import PySwiftyRegex
 

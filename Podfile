@@ -8,7 +8,6 @@ target 'RssReader' do
   use_frameworks!
 
 pod 'RealmSwift'
-pod 'Ji', '~> 2.0.1'
 pod 'SDWebImage'
 pod 'PySwiftyRegex'
 

@@ -11,7 +11,7 @@ import UIKit
 
 class CategoryViewController: UITableViewController {
     
-    let objects = ["トピック","ヘッドライン","エリアガイド","総合","一般","世の中","政治と経済","暮らし","学び","テクノロジー","エンタメ","アニメとゲーム","おもしろ","動画","画像","ランキング","おすすめ"]
+    let objects = ["総合","一般","世の中","政治と経済","暮らし","学び","テクノロジー","エンタメ","アニメとゲーム","おもしろ","おすすめ"]
     
     //画面が表示された直後
     override func viewDidLoad() {
