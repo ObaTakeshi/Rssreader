@@ -24,6 +24,7 @@ class ListViewController: UITableViewController {
         xml?.parse(url: nhk ? Setting.RssUrl1 : Setting.RssUrl) {
             self.tableView.reloadData()
         }
+        convertURL.title = nhk ? "NHK" : " はてなブックマーク"
     }
     
     //画面が表示された直後
@@ -35,7 +36,8 @@ class ListViewController: UITableViewController {
             self.title = categoryText
             xml?.setCategolyText(text: categoryText)
             
-         //   convertURL.image = nil
+            convertURL.isEnabled = false
+            convertURL.tintColor = UIColor(white:0,alpha:0)
             
         }
         //URLの指定
