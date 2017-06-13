@@ -128,7 +128,7 @@
         <!--カテゴリー-->
         <scene sceneID="u6k-vF-I00">
             <objects>
-                <tableViewController id="5QO-Na-qx2" customClass="CategolyViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5QO-Na-qx2" customClass="CategoryViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6E3-jj-yHW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,6 +150,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nLH-CO-dOr" kind="show" id="wzU-hu-5yY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -242,11 +245,11 @@
             </objects>
             <point key="canvasLocation" x="105" y="944"/>
         </scene>
-        <!--Categoly-->
+        <!--Category-->
         <scene sceneID="wTV-pV-bwl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ACQ-iJ-xxs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Categoly" id="JGe-n5-qet"/>
+                    <tabBarItem key="tabBarItem" title="Category" id="JGe-n5-qet"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xjb-Tq-FTM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -263,6 +266,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d3W-jI-472"/>
+        <segue reference="wzU-hu-5yY"/>
+        <segue reference="12Q-wt-6bo"/>
     </inferredMetricsTieBreakers>
 </document>

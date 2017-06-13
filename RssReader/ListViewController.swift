@@ -13,15 +13,19 @@ import SDWebImage
 import PySwiftyRegex
 
 class ListViewController: UITableViewController {
-    
+    var categoryText:String = ""
     var xml: LivtViewXmlParser?
+    
     
     //画面が表示された直後
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         xml = LivtViewXmlParser()
-        
+        if categoryText != ""{
+            self.title = categoryText
+            xml?.setCategolyText(text: categoryText)
+        }
         //URLの指定
         xml?.parse(url: Setting.RssUrl) {
             self.tableView.reloadData()
@@ -81,15 +85,21 @@ class ListViewCell: UITableViewCell {
     }
 }
 
-//デリゲート
+
 class LivtViewXmlParser: NSObject, XMLParserDelegate {
-    
+    var categoryText:String = ""
+    var categoryOn = false
     //itemクラス型プロパティ
     var item: Item?
     //複数記事を格納する配列
     var items = [Item]()
     var currentString = ""
     var completionHandler: (() -> ())?
+    
+    func setCategolyText(text:String){
+        categoryText = text
+        categoryOn = true
+    }
     
     func parse(url: String, completionHandler: @escaping () -> ()) {
         //URLがない時
@@ -147,8 +157,14 @@ class LivtViewXmlParser: NSObject, XMLParserDelegate {
                 i.image = d
             }else{
             }
- 
-        case "item": items.append(i)
+        case "dc:subject": i.category = currentString
+        case "item":
+            if categoryOn == false {
+                items.append(i)
+            
+            } else if i.category == categoryText{
+                items.append(i)
+            }
         default: break
         }
     }

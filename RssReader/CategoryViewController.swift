@@ -9,23 +9,21 @@
 import Foundation
 import UIKit
 
-class CategolyViewController: UITableViewController {
+class CategoryViewController: UITableViewController {
     
-    let objects = ["暮らし","アニメとゲーム"]
+    let objects = ["トピック","ヘッドライン","エリアガイド","総合","一般","世の中","政治と経済","暮らし","学び","テクノロジー","エンタメ","アニメとゲーム","おもしろ","動画","画像","ランキング","おすすめ"]
     
     //画面が表示された直後
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    //セルのタップ時に送るデータ
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- //
-//        if let indexPath = self.tableView.indexPathForSelectedRow {
-//            let controller = segue.destination as! DetailViewController
-//            controller.item = x.items[indexPath.row]
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            let controller = segue.destination as! ListViewController
+            controller.categoryText = objects[indexPath.row]
+        }
+    }
     
     //必須メソッド(戻り値はセルの数)
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
