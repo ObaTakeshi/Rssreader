@@ -27,7 +27,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVz-E4-N2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-794" y="1119"/>
+            <point key="canvasLocation" x="-791" y="188"/>
         </scene>
         <!--一覧-->
         <scene sceneID="R1O-WA-KlH">
@@ -78,11 +78,20 @@
                             <outlet property="delegate" destination="nLH-CO-dOr" id="s3a-0X-c8M"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="一覧" id="1pf-vq-hTr"/>
+                    <navigationItem key="navigationItem" title="一覧" id="1pf-vq-hTr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ikQ-b9-Pqc">
+                            <connections>
+                                <action selector="nhk:" destination="nLH-CO-dOr" id="178-dK-KTu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="convertURL" destination="ikQ-b9-Pqc" id="6pT-df-xDG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xf7-4w-8Ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="188.45577211394306"/>
+            <point key="canvasLocation" x="993" y="188"/>
         </scene>
         <!--ブックマーク-->
         <scene sceneID="yYW-pg-Uvd">
@@ -123,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68S-xN-x4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="943"/>
+            <point key="canvasLocation" x="993" y="943"/>
         </scene>
         <!--カテゴリー-->
         <scene sceneID="u6k-vF-I00">
@@ -165,7 +174,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azC-b1-OGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="1656"/>
+            <point key="canvasLocation" x="994" y="-681"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="DoM-7B-BcH">
@@ -205,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGG-Z9-F1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="467"/>
+            <point key="canvasLocation" x="1935" y="663"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9kl-hP-teC">
@@ -262,7 +271,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3p1-uU-5KA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="1656"/>
+            <point key="canvasLocation" x="90" y="-681"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

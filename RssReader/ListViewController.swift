@@ -14,7 +14,17 @@ import PySwiftyRegex
 class ListViewController: UITableViewController {
     var categoryText:String = ""
     var xml: LivtViewXmlParser?
+    var nhk = false
     
+    @IBOutlet weak var convertURL: UIBarButtonItem!
+    //bar buttonが押されたらURLを変えてリロード
+    @IBAction func nhk(_ sender: Any) {
+        nhk = !self.nhk
+
+        xml?.parse(url: nhk ? Setting.RssUrl1 : Setting.RssUrl) {
+            self.tableView.reloadData()
+        }
+    }
     
     //画面が表示された直後
     override func viewDidAppear(_ animated: Bool) {
@@ -24,9 +34,12 @@ class ListViewController: UITableViewController {
         if categoryText != ""{
             self.title = categoryText
             xml?.setCategolyText(text: categoryText)
+            
+         //   convertURL.image = nil
+            
         }
         //URLの指定
-        xml?.parse(url: Setting.RssUrl) {
+        xml?.parse(url: nhk ? Setting.RssUrl1 : Setting.RssUrl) {
             self.tableView.reloadData()
         }
     }
