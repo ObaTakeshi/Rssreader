@@ -16,11 +16,13 @@ class ListViewController: UITableViewController {
     
     var xml: LivtViewXmlParser?
     
-    //おそらくページのリロード
+    //画面が表示された直後
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         xml = LivtViewXmlParser()
+        
+        //URLの指定
         xml?.parse(url: Setting.RssUrl) {
             self.tableView.reloadData()
         }
@@ -40,6 +42,7 @@ class ListViewController: UITableViewController {
     
     //必須メソッド(戻り値はセルの数)
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //nilか否か
         return xml?.items.count ?? 0
     }
     
@@ -89,7 +92,7 @@ class LivtViewXmlParser: NSObject, XMLParserDelegate {
     var completionHandler: (() -> ())?
     
     func parse(url: String, completionHandler: @escaping () -> ()) {
-        //URLの指定
+        //URLがない時
         guard let url = URL(string: url) else {
             return
         }

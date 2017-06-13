@@ -9,5 +9,5 @@
 import Foundation
 enum Setting {
     static let RssUrl = "http://feeds.feedburner.com/hatena/b/hotentry"
-    //"http://www3.nhk.or.jp/rss/news/cat0.xml"
+    //static let RssUrl1 = "http://www3.nhk.or.jp/rss/news/cat0.xml"
 }
