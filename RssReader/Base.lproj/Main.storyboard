@@ -204,6 +204,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ken-g9-PzX" kind="show" id="Pth-gb-ygv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -405,6 +408,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="MlZ-JN-8ew"/>
         <segue reference="d1g-DL-QGa"/>
-        <segue reference="12Q-wt-6bo"/>
+        <segue reference="Pth-gb-ygv"/>
     </inferredMetricsTieBreakers>
 </document>
