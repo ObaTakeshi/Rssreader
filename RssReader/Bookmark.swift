@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+//Realmのテーブル
 class Bookmark: Object {
     dynamic var title = ""
     dynamic var detail = ""

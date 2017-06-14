@@ -11,12 +11,15 @@ import UIKit
 import RealmSwift
 
 class BookmarkViewController: UITableViewController {
+    //Objectのサブクラスのみ格納できるArray
     var bookmarks: Results<Bookmark>?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        //Realmインスタンスの取得
         let realm = try! Realm()
+        //ブックマーク全件取得
         bookmarks = realm.objects(Bookmark.self).sorted(byProperty: "date", ascending: false)
         
         tableView.reloadData()

@@ -34,12 +34,14 @@ class DetailViewController: UIViewController {
             return
         }
         
+        //ブックマークインスタンスの作成
         let bookmark = Bookmark()
         bookmark.title = i.title
         bookmark.detail = i.detail
         bookmark.link = i.link
         bookmark.date = NSDate()
         
+        //Realmへの追加
         let realm = try! Realm()
         try! realm.write {
             realm.add(bookmark)
