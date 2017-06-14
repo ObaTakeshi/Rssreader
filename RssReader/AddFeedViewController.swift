@@ -17,6 +17,8 @@ class AddFeedViewController :UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        urlText.placeholder = "URL"
+        titleText.placeholder = "ページのタイトル"
     }
 
     @IBAction func registerButton(_ sender: AnyObject) {
