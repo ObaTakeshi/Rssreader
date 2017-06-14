@@ -27,13 +27,13 @@ class FeedViewController: UITableViewController {
         tableView.reloadData()
     }
     
-/*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.tableView.indexPathForSelectedRow {
             let controller = segue.destination as! ListViewController
-            controller.categoryText = objects[indexPath.row]
+            controller.url = (feeds?[indexPath.row].url)!
         }
     }
-*/    
+    
     //必須メソッド(戻り値はセルの数)
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //nilか否か

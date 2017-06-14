@@ -1,32 +1,19 @@
 //
-//  ListViewController.swift
+//  CategoryDetailListViewController.swift
 //  RssReader
 //
-//  Created by oba on 2017/06/06.
+//  Created by oba on 2017/06/14.
 //  Copyright © 2017年 mycompany. All rights reserved.
 //
 
 import Foundation
 import UIKit
-import SDWebImage
 
-
-class ListViewController: UITableViewController {
+class CategoryDetailListViewController : UITableViewController{
     var categoryText:String = ""
     var url:String = ""
     var xml: LivtViewXmlParser?
-    var nhk = false
     
-    @IBOutlet weak var convertURL: UIBarButtonItem!
-    //bar buttonが押されたらURLを変えてリロード
-//    @IBAction func nhk(_ sender: Any) {
-//        nhk = !self.nhk
-//
-//        xml?.parse(url: url) {
-//            self.tableView.reloadData()
-//        }
-//        convertURL.title = nhk ? "NHK" : " はてなブックマーク"
-//    }
     
     //画面が表示された直後
     override func viewDidAppear(_ animated: Bool) {
@@ -36,10 +23,6 @@ class ListViewController: UITableViewController {
         if categoryText != ""{
             self.title = categoryText
             xml?.setCategolyText(text: categoryText)
-            
-            convertURL.isEnabled = false
-            convertURL.tintColor = UIColor(white:0,alpha:0)
-            
         }
         //URLの指定
         xml?.parse(url: url) {
@@ -82,23 +65,4 @@ class ListViewController: UITableViewController {
         return cell
     }
 }
-
-class ListViewCell: UITableViewCell {
-    //宣言の際クラス名に!をつけることで以後プロパティ名の使用に!を用いなくていい
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-
-    @IBOutlet weak var imageLabel: UIImageView!
-    
-    var item: Item? {
-        didSet {
-            titleLabel.text = item?.title
-            descriptionLabel.numberOfLines = 4
-            descriptionLabel.text = item?.detail
-            imageLabel.sd_setImage(with: NSURL(string: (item?.image)!) as URL?, placeholderImage: UIImage(named: "noImage.png"))
-        }
-    }
-}
-
-
 

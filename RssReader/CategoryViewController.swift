@@ -20,7 +20,7 @@ class CategoryViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let controller = segue.destination as! ListViewController
+            let controller = segue.destination as! CategoryDetailListViewController
             controller.categoryText = objects[indexPath.row]
         }
     }
