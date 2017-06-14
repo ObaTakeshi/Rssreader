@@ -12,7 +12,7 @@ import SDWebImage
 
 
 class ListViewController: UITableViewController {
-    var url:String = ""
+    var url:String = "http://feeds.feedburner.com/hatena/b/hotentry"
     var xml: LivtViewXmlParser?
     
     //画面が表示された直後

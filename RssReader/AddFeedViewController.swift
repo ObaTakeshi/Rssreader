@@ -22,17 +22,20 @@ class AddFeedViewController :UIViewController{
     }
 
     @IBAction func registerButton(_ sender: AnyObject) {
-        let feed = Feed()
-        feed.url = urlText.text!
-        feed.name = titleText.text!
-        feed.date = NSDate()
-        
-        //Realmへの追加
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(feed)
+        if urlText.text! != "" || titleText.text! != ""{
+            let feed = Feed()
+            feed.url = urlText.text!
+            feed.name = titleText.text!
+            feed.date = NSDate()
+            
+            
+            //Realmへの追加
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(feed)
+            }
         }
- 
+        
     }
     
 }
