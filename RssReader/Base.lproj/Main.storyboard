@@ -177,7 +177,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azC-b1-OGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="-681"/>
+            <point key="canvasLocation" x="2070" y="188"/>
         </scene>
         <!--Category Detail List View Controller-->
         <scene sceneID="mIm-W9-EtN">
@@ -217,7 +217,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fw0-gw-zaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="-681"/>
+            <point key="canvasLocation" x="3025" y="188"/>
         </scene>
         <!--Feed-->
         <scene sceneID="0Iy-gb-Is5">
@@ -232,11 +232,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GZp-HG-p2X" id="tX6-1A-opR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="890-ns-Xu5">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -264,7 +264,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRA-Ep-EgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-791" y="-681"/>
+            <point key="canvasLocation" x="2070" y="-626"/>
         </scene>
         <!--Add Feed View Controller-->
         <scene sceneID="GqK-6D-1Cg">
@@ -324,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUk-tm-qZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="-681"/>
+            <point key="canvasLocation" x="3025" y="-625"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="DoM-7B-BcH">
