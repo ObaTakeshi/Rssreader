@@ -23,11 +23,12 @@ class CategoryDetailListViewController : UITableViewController{
         if categoryText != ""{
             self.title = categoryText
             xml?.setCategolyText(text: categoryText)
+            xml?.parse(url: url) {
+                self.tableView.reloadData()
+            }
         }
         //URLの指定
-        xml?.parse(url: url) {
-            self.tableView.reloadData()
-        }
+
     }
     
     //セルのタップ時に送るデータ
@@ -48,20 +49,12 @@ class CategoryDetailListViewController : UITableViewController{
         return xml?.items.count ?? 0
     }
     
-    //必須メソッド(戻り値はセルの内容)　indexPathは現在設定しているセルの行番号を保持
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //dequeue~Cellはセルの再利用(引数に再利用するセル(ストーリボードのIdentifer))
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as? ListViewCell else {
-            fatalError("Invalid cell")
-        }
-        
-        guard let x = xml else {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryDetailCell", for: indexPath)
+        guard let x = xml?.items[indexPath.row] else {
             return cell
         }
-        
-        cell.item = x.items[indexPath.row]
-        
+        cell.textLabel?.text = x.title
         return cell
     }
 }

@@ -12,7 +12,7 @@ import RealmSwift
 
 class FeedViewController: UITableViewController {
     var feeds: Results<Feed>?
-    let objects = ["はてなブックマーク","NHK"]
+   // let objects = ["はてなブックマーク","NHK"]
     
     
     //画面が表示された直後

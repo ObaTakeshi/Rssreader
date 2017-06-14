@@ -10,7 +10,7 @@
 		2E210B161EEF73B100E64689 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E210B151EEF73B100E64689 /* CategoryViewController.swift */; };
 		2E210B1A1EEFD17800E64689 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E210B191EEFD17800E64689 /* FeedViewController.swift */; };
 		2E210B1C1EEFD71600E64689 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E210B1B1EEFD71600E64689 /* AddFeedViewController.swift */; };
-		2E23621B1EF0C8AA005FD445 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23621A1EF0C8AA005FD445 /* XMLParser.swift */; };
+		2E23621B1EF0C8AA005FD445 /* LivtViewXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23621A1EF0C8AA005FD445 /* LivtViewXmlParser.swift */; };
 		2E3CF4981EF0C9EF0060FD9D /* CategoryDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3CF4971EF0C9EF0060FD9D /* CategoryDetailListViewController.swift */; };
 		2E67495F1EE6417900CA47A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E67495E1EE6417900CA47A0 /* AppDelegate.swift */; };
 		2E6749641EE6417900CA47A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6749621EE6417900CA47A0 /* Main.storyboard */; };
@@ -29,7 +29,7 @@
 		2E210B151EEF73B100E64689 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		2E210B191EEFD17800E64689 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		2E210B1B1EEFD71600E64689 /* AddFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
-		2E23621A1EF0C8AA005FD445 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
+		2E23621A1EF0C8AA005FD445 /* LivtViewXmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivtViewXmlParser.swift; sourceTree = "<group>"; };
 		2E3CF4971EF0C9EF0060FD9D /* CategoryDetailListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailListViewController.swift; sourceTree = "<group>"; };
 		2E67495B1EE6417900CA47A0 /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E67495E1EE6417900CA47A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 				2E210B151EEF73B100E64689 /* CategoryViewController.swift */,
 				2E210B191EEFD17800E64689 /* FeedViewController.swift */,
 				2E210B1B1EEFD71600E64689 /* AddFeedViewController.swift */,
-				2E23621A1EF0C8AA005FD445 /* XMLParser.swift */,
+				2E23621A1EF0C8AA005FD445 /* LivtViewXmlParser.swift */,
 				2E3CF4971EF0C9EF0060FD9D /* CategoryDetailListViewController.swift */,
 			);
 			path = RssReader;
@@ -243,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6749751EE64ECF00CA47A0 /* Item.swift in Sources */,
-				2E23621B1EF0C8AA005FD445 /* XMLParser.swift in Sources */,
+				2E23621B1EF0C8AA005FD445 /* LivtViewXmlParser.swift in Sources */,
 				2E210B1A1EEFD17800E64689 /* FeedViewController.swift in Sources */,
 				2E210B1C1EEFD71600E64689 /* AddFeedViewController.swift in Sources */,
 				2E6749711EE643FF00CA47A0 /* ListViewController.swift in Sources */,

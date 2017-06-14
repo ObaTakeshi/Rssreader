@@ -28,13 +28,19 @@ class ListViewController: UITableViewController {
     
     //セルのタップ時に送るデータ
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let x = xml else {
-            return
-        }
         
-        if let indexPath = self.tableView.indexPathForSelectedRow {
-            let controller = segue.destination as! DetailViewController
-            controller.item = x.items[indexPath.row]
+        if segue.identifier == "Category"{
+            let controller = segue.destination as! CategoryViewController
+            controller.url = url
+        }else{
+            guard let x = xml else {
+                return
+            }
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! DetailViewController
+                controller.item = x.items[indexPath.row]
+            }
         }
     }
     

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class CategoryViewController: UITableViewController {
+    var url:String = ""
     
     let objects = ["総合","一般","世の中","政治と経済","暮らし","学び","テクノロジー","エンタメ","アニメとゲーム","おもしろ","おすすめ"]
     
@@ -22,6 +23,7 @@ class CategoryViewController: UITableViewController {
         if let indexPath = self.tableView.indexPathForSelectedRow {
             let controller = segue.destination as! CategoryDetailListViewController
             controller.categoryText = objects[indexPath.row]
+            controller.url = url
         }
     }
     
