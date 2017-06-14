@@ -12,35 +12,14 @@ import SDWebImage
 
 
 class ListViewController: UITableViewController {
-    var categoryText:String = ""
     var url:String = ""
     var xml: LivtViewXmlParser?
-    var nhk = false
-    
-    @IBOutlet weak var convertURL: UIBarButtonItem!
-    //bar buttonが押されたらURLを変えてリロード
-//    @IBAction func nhk(_ sender: Any) {
-//        nhk = !self.nhk
-//
-//        xml?.parse(url: url) {
-//            self.tableView.reloadData()
-//        }
-//        convertURL.title = nhk ? "NHK" : " はてなブックマーク"
-//    }
     
     //画面が表示された直後
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         xml = LivtViewXmlParser()
-        if categoryText != ""{
-            self.title = categoryText
-            xml?.setCategolyText(text: categoryText)
-            
-            convertURL.isEnabled = false
-            convertURL.tintColor = UIColor(white:0,alpha:0)
-            
-        }
         //URLの指定
         xml?.parse(url: url) {
             self.tableView.reloadData()

@@ -85,16 +85,8 @@
                                 <segue destination="Hnu-PE-GqN" kind="show" id="MlZ-JN-8ew"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ikQ-b9-Pqc">
-                            <connections>
-                                <action selector="nhk:" destination="nLH-CO-dOr" id="178-dK-KTu"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="convertURL" destination="ikQ-b9-Pqc" id="6pT-df-xDG"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xf7-4w-8Ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,7 +418,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jaq-Tl-jhU"/>
+        <segue reference="MlZ-JN-8ew"/>
         <segue reference="d1g-DL-QGa"/>
         <segue reference="12Q-wt-6bo"/>
     </inferredMetricsTieBreakers>
