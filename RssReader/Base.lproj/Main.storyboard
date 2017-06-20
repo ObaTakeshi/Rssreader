@@ -95,7 +95,7 @@
                     <navigationItem key="navigationItem" title="一覧" id="bLn-YE-HQ2">
                         <barButtonItem key="leftBarButtonItem" title="Feed" id="CMx-BS-jyV">
                             <connections>
-                                <segue destination="Hnu-PE-GqN" kind="show" id="zhm-ku-D5J"/>
+                                <segue destination="P8i-Xd-0aC" kind="modal" id="Bb1-hB-5Lr"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Category" id="uXC-Xh-TUe">
@@ -127,7 +127,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Dr-QC-jAZ">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                            <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -168,7 +168,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0hp-RY-WD0">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                            <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -210,7 +210,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qn2-w9-dm6">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                            <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -233,6 +233,22 @@
             </objects>
             <point key="canvasLocation" x="3025" y="188"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ktS-9U-UjX">
+            <objects>
+                <navigationController id="P8i-Xd-0aC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bmd-pf-lzs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Hnu-PE-GqN" kind="relationship" relationship="rootViewController" id="aPe-Zr-Vpc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8j4-rK-PlU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="-626"/>
+        </scene>
         <!--Feed-->
         <scene sceneID="0Iy-gb-Is5">
             <objects>
@@ -250,7 +266,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="890-ns-Xu5">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                            <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -421,7 +437,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zhm-ku-D5J"/>
+        <segue reference="aPe-Zr-Vpc"/>
         <segue reference="d1g-DL-QGa"/>
         <segue reference="12Q-wt-6bo"/>
     </inferredMetricsTieBreakers>
