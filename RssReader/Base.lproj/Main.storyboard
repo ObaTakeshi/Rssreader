@@ -292,27 +292,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO8-eA-6zl">
-                                <rect key="frame" x="153" y="201" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROg-UP-vbV">
-                                <rect key="frame" x="16" y="144" width="382" height="30"/>
+                                <rect key="frame" x="25" y="106" width="364" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jkk-3A-wA2">
-                                <rect key="frame" x="16" y="238" width="382" height="30"/>
+                                <rect key="frame" x="25" y="166" width="364" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEh-xc-xaO">
-                                <rect key="frame" x="168" y="316" width="78" height="34"/>
+                                <rect key="frame" x="168" y="226" width="78" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <state key="normal" title="Add Feed">
@@ -323,28 +317,19 @@
                                     <segue destination="Hnu-PE-GqN" kind="show" id="jaq-Tl-jhU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-au-lfw">
-                                <rect key="frame" x="166" y="102" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ROg-UP-vbV" secondAttribute="trailing" constant="16" id="8a2-6P-ndq"/>
-                            <constraint firstItem="JO8-eA-6zl" firstAttribute="centerX" secondItem="WCZ-S0-5Ab" secondAttribute="centerX" id="A5G-AX-g5E"/>
-                            <constraint firstItem="ROg-UP-vbV" firstAttribute="centerX" secondItem="WCZ-S0-5Ab" secondAttribute="centerX" id="ABN-0C-ByK"/>
-                            <constraint firstItem="GEh-xc-xaO" firstAttribute="top" secondItem="Jkk-3A-wA2" secondAttribute="bottom" constant="48" id="GTn-AB-Cic"/>
-                            <constraint firstItem="sHW-au-lfw" firstAttribute="top" secondItem="H56-Jp-fiN" secondAttribute="bottom" constant="82" id="McG-2H-X5Y"/>
-                            <constraint firstAttribute="trailing" secondItem="Jkk-3A-wA2" secondAttribute="trailing" constant="16" id="Mk6-6e-Sml"/>
-                            <constraint firstItem="GEh-xc-xaO" firstAttribute="centerX" secondItem="WCZ-S0-5Ab" secondAttribute="centerX" id="NPF-18-TTG"/>
-                            <constraint firstItem="JO8-eA-6zl" firstAttribute="top" secondItem="ROg-UP-vbV" secondAttribute="bottom" constant="27" id="oXw-M0-LYA"/>
-                            <constraint firstItem="ROg-UP-vbV" firstAttribute="top" secondItem="sHW-au-lfw" secondAttribute="bottom" constant="21" id="onp-3I-fKj"/>
-                            <constraint firstItem="Jkk-3A-wA2" firstAttribute="leading" secondItem="WCZ-S0-5Ab" secondAttribute="leading" constant="16" id="pEh-1F-vsZ"/>
-                            <constraint firstItem="sHW-au-lfw" firstAttribute="centerX" secondItem="WCZ-S0-5Ab" secondAttribute="centerX" id="sK7-v3-Q4C"/>
-                            <constraint firstItem="Jkk-3A-wA2" firstAttribute="top" secondItem="JO8-eA-6zl" secondAttribute="bottom" constant="16" id="tcr-tU-hrS"/>
-                            <constraint firstItem="ROg-UP-vbV" firstAttribute="leading" secondItem="WCZ-S0-5Ab" secondAttribute="leading" constant="16" id="vKG-vz-fQL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jkk-3A-wA2" secondAttribute="trailing" constant="5" id="0NL-AU-KNj"/>
+                            <constraint firstItem="Jkk-3A-wA2" firstAttribute="top" secondItem="ROg-UP-vbV" secondAttribute="bottom" constant="30" id="8DL-w6-f7V"/>
+                            <constraint firstItem="ROg-UP-vbV" firstAttribute="top" secondItem="H56-Jp-fiN" secondAttribute="bottom" constant="86" id="BYE-Z6-fs1"/>
+                            <constraint firstItem="Jkk-3A-wA2" firstAttribute="leading" secondItem="WCZ-S0-5Ab" secondAttribute="leadingMargin" constant="5" id="PXT-pc-OI8"/>
+                            <constraint firstItem="ROg-UP-vbV" firstAttribute="centerX" secondItem="WCZ-S0-5Ab" secondAttribute="centerX" id="Tiv-GM-V7S"/>
+                            <constraint firstItem="GEh-xc-xaO" firstAttribute="centerX" secondItem="WCZ-S0-5Ab" secondAttribute="centerX" id="Wgx-AR-wNT"/>
+                            <constraint firstItem="ROg-UP-vbV" firstAttribute="leading" secondItem="WCZ-S0-5Ab" secondAttribute="leadingMargin" constant="5" id="Yth-C2-Wd8"/>
+                            <constraint firstItem="Jkk-3A-wA2" firstAttribute="centerX" secondItem="WCZ-S0-5Ab" secondAttribute="centerX" id="hzH-CZ-Jay"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ROg-UP-vbV" secondAttribute="trailing" constant="5" id="rr4-AP-Lt7"/>
+                            <constraint firstItem="GEh-xc-xaO" firstAttribute="top" secondItem="Jkk-3A-wA2" secondAttribute="bottom" constant="30" id="yfi-bG-1jZ"/>
                         </constraints>
                     </view>
                     <connections>
