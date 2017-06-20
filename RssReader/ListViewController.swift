@@ -26,6 +26,15 @@ class ListViewController: UITableViewController {
         }
     }
     
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        xml = LivtViewXmlParser()
+//        //URLの指定
+//        xml?.parse(url: url) {
+//            self.tableView.reloadData()
+//        }
+//    }
     //セルのタップ時に送るデータ
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -75,12 +84,50 @@ class ListViewCell: UITableViewCell {
 
     @IBOutlet weak var imageLabel: UIImageView!
     
+    @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
     var item: Item? {
         didSet {
             titleLabel.text = item?.title
             descriptionLabel.numberOfLines = 4
             descriptionLabel.text = item?.detail
             imageLabel.sd_setImage(with: NSURL(string: (item?.image)!) as URL?)//, placeholderImage: UIImage(named: "noImage.png"))
+            if item?.image == ""{
+                imageWidthConstraint.constant = 0
+            }
+//                let titleView = NSLayoutConstraint(item: titleLabel,
+//                                                   attribute : NSLayoutAttribute.left,
+//                                                   relatedBy : NSLayoutRelation.equal,
+//                                                   toItem : self,
+//                                                   attribute : NSLayoutAttribute.left,
+//                                                   multiplier : 1.0,
+//                                                   constant : 8.0)
+//                self.addConstraint(titleView)
+//                let descriptionView = NSLayoutConstraint(item: descriptionLabel,
+//                                                   attribute : NSLayoutAttribute.left,
+//                                                   relatedBy : NSLayoutRelation.equal,
+//                                                   toItem : self,
+//                                                   attribute : NSLayoutAttribute.left,
+//                                                   multiplier : 1.0,
+//                                                   constant : 8.0)
+//                self.addConstraint(descriptionView)
+//            }else{
+//                let titleView = NSLayoutConstraint(item: titleLabel,
+//                                                   attribute : NSLayoutAttribute.left,
+//                                                   relatedBy : NSLayoutRelation.equal,
+//                                                   toItem : imageLabel,
+//                                                   attribute : NSLayoutAttribute.right,
+//                                                   multiplier : 1.0,
+//                                                   constant : 8.0)
+//                self.addConstraint(titleView)
+//                let descriptionView = NSLayoutConstraint(item: descriptionLabel,
+//                                                         attribute : NSLayoutAttribute.left,
+//                                                         relatedBy : NSLayoutRelation.equal,
+//                                                         toItem : imageLabel,
+//                                                         attribute : NSLayoutAttribute.right,
+//                                                         multiplier : 1.0,
+//                                                         constant : 8.0)
+//                self.addConstraint(descriptionView)
+//            }
         }
     }
 }

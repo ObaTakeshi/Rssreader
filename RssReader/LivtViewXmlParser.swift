@@ -79,7 +79,6 @@ class LivtViewXmlParser: NSObject, XMLParserDelegate {
                 let d = c.sub("",b)
                 if d.hasSuffix("jpg"){
                     i.image = d
-                }else{
                 }
             }catch {
             }

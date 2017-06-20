@@ -27,8 +27,6 @@ class CategoryDetailListViewController : UITableViewController{
                 self.tableView.reloadData()
             }
         }
-        //URLの指定
-
     }
     
     //セルのタップ時に送るデータ

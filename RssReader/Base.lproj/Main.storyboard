@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,20 +41,23 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W0c-iK-aZ7" id="RGD-l0-Ha9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="日本のサッカー専門誌" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uq8-B5-biK" userLabel="Description Label">
-                                            <rect key="frame" x="90" y="31" width="316" height="58"/>
+                                            <rect key="frame" x="92" y="31" width="314" height="58"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bbs-AT-GWa" userLabel="Image Label">
                                             <rect key="frame" x="0.0" y="0.0" width="84" height="89"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="84" id="sSt-ev-9oc"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="サッカー" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V4-Tf-jjq" userLabel="Title Label">
-                                            <rect key="frame" x="92" y="3" width="316" height="20.333333333333332"/>
+                                            <rect key="frame" x="92" y="3" width="316" height="20"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -63,14 +65,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="0V4-Tf-jjq" secondAttribute="trailing" constant="6" id="5No-kg-2EP"/>
-                                        <constraint firstItem="0V4-Tf-jjq" firstAttribute="leading" secondItem="bbs-AT-GWa" secondAttribute="trailing" constant="8" id="AD9-Ii-hUy"/>
                                         <constraint firstItem="bbs-AT-GWa" firstAttribute="leading" secondItem="RGD-l0-Ha9" secondAttribute="leading" id="NxW-Bf-mpZ"/>
                                         <constraint firstAttribute="trailing" secondItem="uq8-B5-biK" secondAttribute="trailing" constant="8" id="W0l-0o-RCP"/>
                                         <constraint firstItem="uq8-B5-biK" firstAttribute="top" secondItem="0V4-Tf-jjq" secondAttribute="bottom" constant="3" id="WUJ-Gv-rq4"/>
-                                        <constraint firstItem="uq8-B5-biK" firstAttribute="leading" secondItem="bbs-AT-GWa" secondAttribute="trailing" constant="6" id="i9C-U8-6GG"/>
+                                        <constraint firstItem="0V4-Tf-jjq" firstAttribute="leading" secondItem="bbs-AT-GWa" secondAttribute="trailing" constant="8" id="dwM-fx-5xL"/>
+                                        <constraint firstItem="uq8-B5-biK" firstAttribute="leading" secondItem="bbs-AT-GWa" secondAttribute="trailing" constant="8" id="lPQ-f2-eeB"/>
                                         <constraint firstItem="0V4-Tf-jjq" firstAttribute="top" secondItem="RGD-l0-Ha9" secondAttribute="top" constant="3" id="lxW-FU-fBL"/>
-                                        <constraint firstItem="bbs-AT-GWa" firstAttribute="height" relation="lessThanOrEqual" secondItem="RGD-l0-Ha9" secondAttribute="height" multiplier="1:1" id="nvY-oR-0lV"/>
-                                        <constraint firstItem="bbs-AT-GWa" firstAttribute="width" secondItem="RGD-l0-Ha9" secondAttribute="height" multiplier="84:89" id="oMG-75-X2L"/>
                                         <constraint firstAttribute="bottom" secondItem="bbs-AT-GWa" secondAttribute="bottom" constant="0.5" id="pDo-hb-9QH"/>
                                         <constraint firstAttribute="bottom" secondItem="uq8-B5-biK" secondAttribute="bottom" constant="0.5" id="spp-ue-SMT"/>
                                         <constraint firstItem="bbs-AT-GWa" firstAttribute="width" relation="lessThanOrEqual" secondItem="RGD-l0-Ha9" secondAttribute="width" multiplier="1:1" id="tHI-fA-Ut7"/>
@@ -80,6 +80,7 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="uq8-B5-biK" id="1Yd-L0-tsP"/>
                                     <outlet property="imageLabel" destination="bbs-AT-GWa" id="dBq-Pz-iCF"/>
+                                    <outlet property="imageWidthConstraint" destination="sSt-ev-9oc" id="2Iz-xh-7z6"/>
                                     <outlet property="titleLabel" destination="0V4-Tf-jjq" id="xGQ-O0-FA2"/>
                                     <segue destination="ken-g9-PzX" kind="show" identifier="Detail" id="12Q-wt-6bo"/>
                                 </connections>
@@ -91,9 +92,17 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="一覧" id="4PA-zf-7GH">
-                        <barButtonItem key="leftBarButtonItem" title="Feed" id="Vo2-1L-XBT"/>
-                        <barButtonItem key="rightBarButtonItem" title="Category" id="EkW-yJ-lyM"/>
+                    <navigationItem key="navigationItem" title="一覧" id="bLn-YE-HQ2">
+                        <barButtonItem key="leftBarButtonItem" title="Feed" id="CMx-BS-jyV">
+                            <connections>
+                                <segue destination="Hnu-PE-GqN" kind="show" id="zhm-ku-D5J"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Category" id="uXC-Xh-TUe">
+                            <connections>
+                                <segue destination="5QO-Na-qx2" kind="show" identifier="Category" id="gKD-EZ-Cwv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -168,7 +177,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="IdV-xV-JCI" kind="show" id="6TN-33-vrS"/>
+                                    <segue destination="IdV-xV-JCI" kind="show" id="MeK-0z-W1t"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -427,6 +436,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="zhm-ku-D5J"/>
         <segue reference="d1g-DL-QGa"/>
         <segue reference="12Q-wt-6bo"/>
     </inferredMetricsTieBreakers>
