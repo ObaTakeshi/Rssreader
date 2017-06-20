@@ -80,7 +80,7 @@ class ListViewCell: UITableViewCell {
             titleLabel.text = item?.title
             descriptionLabel.numberOfLines = 4
             descriptionLabel.text = item?.detail
-            imageLabel.sd_setImage(with: NSURL(string: (item?.image)!) as URL?, placeholderImage: UIImage(named: "noImage.png"))
+            imageLabel.sd_setImage(with: NSURL(string: (item?.image)!) as URL?)//, placeholderImage: UIImage(named: "noImage.png"))
         }
     }
 }

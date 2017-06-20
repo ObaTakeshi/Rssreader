@@ -69,20 +69,20 @@ class LivtViewXmlParser: NSObject, XMLParserDelegate {
         case "title": i.title = currentString
         case "description": i.detail = currentString
         case "link": i.link = currentString
-//        case "content:encoded":
-//            do{
-//                let regex = re.compile("src=\"(.+?)\"")
-//                let a = regex.findall(currentString)
-//                let p = re.compile("src=\"")
-//                let b = p.sub("",a[1])
-//                let c = re.compile("\"")
-//                let d = c.sub("",b)
-//                if d.hasSuffix("jpg"){
-//                    i.image = d
-//                }else{
-//                }
-//            }catch {
-//            }
+        case "content:encoded":
+            do{
+                let regex = re.compile("src=\"(.+?)\"")
+                let a = regex.findall(currentString)
+                let p = re.compile("src=\"")
+                let b = p.sub("",a[1])
+                let c = re.compile("\"")
+                let d = c.sub("",b)
+                if d.hasSuffix("jpg"){
+                    i.image = d
+                }else{
+                }
+            }catch {
+            }
         case "dc:subject": i.category = currentString
         case "item":
             if categoryOn == false {
