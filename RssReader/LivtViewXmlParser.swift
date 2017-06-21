@@ -73,13 +73,24 @@ class LivtViewXmlParser: NSObject, XMLParserDelegate {
             do{
                 let regex = re.compile("src=\"(.+?)\"")
                 let a = regex.findall(currentString)
-                let p = re.compile("src=\"")
-                let b = p.sub("",a[1])
-                let c = re.compile("\"")
-                let d = c.sub("",b)
-                if d.hasSuffix("jpg"){
+                if a.isEmpty == false{
+                for l in 0...a.count-1{
+                if a[l].hasSuffix("jpg\""){
+                    let p = re.compile("src=\"")
+                    let b = p.sub("",a[l])
+                    let c = re.compile("\"")
+                    let d = c.sub("",b)
                     i.image = d
                 }
+                }
+                }
+ //               let p = re.compile("src=\"")
+ //               let b = p.sub("",a[1])
+ //               let c = re.compile("\"")
+//                let d = c.sub("",b)
+//                if d.hasSuffix("jpg"){
+ //                  i.image = d
+ //               }
             }catch {
             }
         case "dc:subject": i.category = currentString

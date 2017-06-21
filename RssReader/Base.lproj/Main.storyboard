@@ -168,7 +168,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0hp-RY-WD0">
-                                            <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -210,7 +210,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qn2-w9-dm6">
-                                            <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -287,7 +287,7 @@
                     <navigationItem key="navigationItem" title="Feed" id="2hT-ME-HDf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FmV-gJ-D3g">
                             <connections>
-                                <segue destination="ZUc-gV-G9v" kind="show" id="ziJ-5F-ip6"/>
+                                <segue destination="3XH-og-t6Z" kind="modal" id="lrp-Sa-SwH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -295,6 +295,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRA-Ep-EgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2070" y="-626"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NKK-7K-uXk">
+            <objects>
+                <navigationController id="3XH-og-t6Z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8om-B6-oHJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZUc-gV-G9v" kind="relationship" relationship="rootViewController" id="iIF-C1-fMc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcV-Gf-RoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="-1551"/>
         </scene>
         <!--Add Feed View Controller-->
         <scene sceneID="GqK-6D-1Cg">
@@ -309,20 +325,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROg-UP-vbV">
-                                <rect key="frame" x="25" y="106" width="364" height="30"/>
+                                <rect key="frame" x="25" y="150" width="364" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jkk-3A-wA2">
-                                <rect key="frame" x="25" y="166" width="364" height="30"/>
+                                <rect key="frame" x="25" y="210" width="364" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEh-xc-xaO">
-                                <rect key="frame" x="168" y="226" width="78" height="34"/>
+                                <rect key="frame" x="168" y="270" width="78" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <state key="normal" title="Add Feed">
@@ -348,6 +364,7 @@
                             <constraint firstItem="GEh-xc-xaO" firstAttribute="top" secondItem="Jkk-3A-wA2" secondAttribute="bottom" constant="30" id="yfi-bG-1jZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iZK-Xb-n6A"/>
                     <connections>
                         <outlet property="titleText" destination="Jkk-3A-wA2" id="cOU-F2-5tt"/>
                         <outlet property="urlText" destination="ROg-UP-vbV" id="YOL-bY-tv0"/>
@@ -355,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUk-tm-qZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3024.8000000000002" y="-625.63718140929541"/>
+            <point key="canvasLocation" x="3075" y="-1542"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="DoM-7B-BcH">
@@ -437,7 +454,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aPe-Zr-Vpc"/>
+        <segue reference="jaq-Tl-jhU"/>
         <segue reference="d1g-DL-QGa"/>
         <segue reference="12Q-wt-6bo"/>
     </inferredMetricsTieBreakers>
