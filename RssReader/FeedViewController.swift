@@ -39,6 +39,7 @@ class FeedViewController: UITableViewController {
         if let indexPath = self.tableView.indexPathForSelectedRow {
             let controller = segue.destination as! ListViewController
             controller.url = (feeds?[indexPath.row].url)!
+            controller.name = (feeds?[indexPath.row].name)!
         }
     }
     

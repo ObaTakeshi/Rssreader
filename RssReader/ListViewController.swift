@@ -14,7 +14,7 @@ import SDWebImage
 class ListViewController: UITableViewController {
     var url:String = "http://feeds.feedburner.com/hatena/b/hotentry"
     var xml: LivtViewXmlParser?
-    
+    var name = "はてなホットエントリー"
     //画面が表示された直後
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -24,6 +24,11 @@ class ListViewController: UITableViewController {
         xml?.parse(url: url) {
             self.tableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = name
     }
     
     //セルのタップ時に送るデータ
