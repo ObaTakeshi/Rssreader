@@ -28,7 +28,7 @@ class BookmarkViewController: UITableViewController {
     //bookmarkの削除
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing,animated:animated)
-        tableView.setEditing(editing, animated:animated)
+        //tableView.setEditing(editing, animated:animated)
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

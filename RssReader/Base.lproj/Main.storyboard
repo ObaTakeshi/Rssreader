@@ -233,20 +233,6 @@
             </objects>
             <point key="canvasLocation" x="3025" y="188"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="T1N-hq-3CI">
-            <objects>
-                <tabBarController id="c94-T9-yKd" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="piq-fa-lcT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zor-ff-ZmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-502" y="-696"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ktS-9U-UjX">
             <objects>
@@ -299,6 +285,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Feed" id="2hT-ME-HDf">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="K27-OI-k0u">
+                            <connections>
+                                <segue destination="mfb-Sd-Tzb" kind="modal" id="Vdd-AA-Jz2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FmV-gJ-D3g">
                             <connections>
                                 <segue destination="3XH-og-t6Z" kind="modal" id="lrp-Sa-SwH"/>
@@ -310,9 +301,67 @@
             </objects>
             <point key="canvasLocation" x="2070" y="-626"/>
         </scene>
+        <!--Edit Feed-->
+        <scene sceneID="ssZ-hZ-Mg4">
+            <objects>
+                <tableViewController id="5aQ-58-syB" customClass="EditFeedController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5U4-Bf-caU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditFeedCell" textLabel="mYH-2E-d56" style="IBUITableViewCellStyleDefault" id="l9o-BN-2cG">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l9o-BN-2cG" id="7Bc-Gy-34h">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mYH-2E-d56">
+                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZUc-gV-G9v" kind="show" id="A7o-a8-UnS"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5aQ-58-syB" id="YOj-MP-naZ"/>
+                            <outlet property="delegate" destination="5aQ-58-syB" id="oRc-Mf-p9u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Feed" id="y2W-lC-HtS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPe-YQ-XSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="-1446"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="agv-1T-uLS">
+            <objects>
+                <navigationController id="mfb-Sd-Tzb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MPP-w3-gMf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5aQ-58-syB" kind="relationship" relationship="rootViewController" id="m3x-68-gOI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4D-Ts-cMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="-1446"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NKK-7K-uXk">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcV-Gf-RoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="3XH-og-t6Z" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8om-B6-oHJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -322,9 +371,8 @@
                         <segue destination="ZUc-gV-G9v" kind="relationship" relationship="rootViewController" id="iIF-C1-fMc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VcV-Gf-RoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="-1551"/>
+            <point key="canvasLocation" x="2070" y="-1555"/>
         </scene>
         <!--Add Feed View Controller-->
         <scene sceneID="GqK-6D-1Cg">
@@ -352,10 +400,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEh-xc-xaO">
-                                <rect key="frame" x="168" y="270" width="78" height="34"/>
+                                <rect key="frame" x="192" y="270" width="30" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <state key="normal" title="Add Feed">
+                                <state key="normal">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -380,6 +428,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iZK-Xb-n6A"/>
                     <connections>
+                        <outlet property="sendButton" destination="GEh-xc-xaO" id="tgB-X5-AT6"/>
                         <outlet property="titleText" destination="Jkk-3A-wA2" id="cOU-F2-5tt"/>
                         <outlet property="urlText" destination="ROg-UP-vbV" id="YOL-bY-tv0"/>
                     </connections>
@@ -468,8 +517,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aPe-Zr-Vpc"/>
-        <segue reference="NA6-td-S1D"/>
+        <segue reference="jaq-Tl-jhU"/>
+        <segue reference="A7o-a8-UnS"/>
+        <segue reference="d1g-DL-QGa"/>
         <segue reference="12Q-wt-6bo"/>
     </inferredMetricsTieBreakers>
 </document>

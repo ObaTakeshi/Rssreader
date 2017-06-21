@@ -23,6 +23,7 @@
 		2E6749791EE672AB00CA47A0 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6749781EE672AB00CA47A0 /* BookmarkViewController.swift */; };
 		2E67497B1EE675C800CA47A0 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E67497A1EE675C800CA47A0 /* Bookmark.swift */; };
 		752AC89DC71A48F165C468AF /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A8940A0C36BFE70EE6E612 /* Pods_RssReader.framework */; };
+		DFE2E1991EFA100B0075C9B4 /* EditFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2E1981EFA100B0075C9B4 /* EditFeedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7FBF9794EFD4CB895C276293 /* Pods-RssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.release.xcconfig"; sourceTree = "<group>"; };
 		9254DE4029C261BB300D7077 /* Pods-RssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.debug.xcconfig"; sourceTree = "<group>"; };
 		C1A8940A0C36BFE70EE6E612 /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE2E1981EFA100B0075C9B4 /* EditFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFeedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				2E210B1B1EEFD71600E64689 /* AddFeedViewController.swift */,
 				2E23621A1EF0C8AA005FD445 /* LivtViewXmlParser.swift */,
 				2E3CF4971EF0C9EF0060FD9D /* CategoryDetailListViewController.swift */,
+				DFE2E1981EFA100B0075C9B4 /* EditFeedController.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				2E210B1C1EEFD71600E64689 /* AddFeedViewController.swift in Sources */,
 				2E6749711EE643FF00CA47A0 /* ListViewController.swift in Sources */,
 				2E6749771EE6577D00CA47A0 /* DetailViewController.swift in Sources */,
+				DFE2E1991EFA100B0075C9B4 /* EditFeedController.swift in Sources */,
 				2E67495F1EE6417900CA47A0 /* AppDelegate.swift in Sources */,
 				2E6749791EE672AB00CA47A0 /* BookmarkViewController.swift in Sources */,
 				2E67497B1EE675C800CA47A0 /* Bookmark.swift in Sources */,
