@@ -15,6 +15,11 @@ class ListViewController: UITableViewController {
     var url:String = "http://feeds.feedburner.com/hatena/b/hotentry"
     var xml: LivtViewXmlParser?
     var name = "はてなホットエントリー"
+    
+    @IBAction func backTo(segue:UIStoryboardSegue){
+        tableView.reloadData()
+        
+    }
     //画面が表示された直後
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

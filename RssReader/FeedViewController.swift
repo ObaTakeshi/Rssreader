@@ -38,9 +38,10 @@ class FeedViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.tableView.indexPathForSelectedRow {
-            let controller = segue.destination as! ListViewController
-            controller.url = (feeds?[indexPath.row].url)!
-            controller.name = (feeds?[indexPath.row].name)!
+            if let controller = segue.destination as? ListViewController {
+                controller.url = (feeds?[indexPath.row].url)!
+                controller.name = (feeds?[indexPath.row].name)!
+            }
         }
     }
     
