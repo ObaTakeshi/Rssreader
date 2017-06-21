@@ -28,7 +28,6 @@ class ListViewController: UITableViewController {
     
     //セルのタップ時に送るデータ
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "Category"{
             let controller = segue.destination as! CategoryViewController
             controller.url = url
