@@ -15,7 +15,8 @@ class FeedViewController: UITableViewController {
    // let objects = ["はてなブックマーク","NHK"]
     
     @IBAction func backTo(segue:UIStoryboardSegue){
-        
+        tableView.reloadData()
+
     }
     //画面が表示された直後
     override func viewDidLoad() {
