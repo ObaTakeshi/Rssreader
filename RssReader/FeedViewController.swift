@@ -14,7 +14,9 @@ class FeedViewController: UITableViewController {
     var feeds: Results<Feed>?
    // let objects = ["はてなブックマーク","NHK"]
     
-    
+    @IBAction func backTo(segue:UIStoryboardSegue){
+        
+    }
     //画面が表示された直後
     override func viewDidLoad() {
         super.viewDidLoad()
