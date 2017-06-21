@@ -46,6 +46,7 @@ class DetailViewController: UIViewController {
         try! realm.write {
             realm.add(bookmark)
         }
+        
     }
 }
 

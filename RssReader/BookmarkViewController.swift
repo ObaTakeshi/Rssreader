@@ -25,6 +25,7 @@ class BookmarkViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    //bookmarkの削除
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing,animated:animated)
         tableView.setEditing(editing, animated:animated)

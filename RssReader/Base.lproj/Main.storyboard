@@ -127,7 +127,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Dr-QC-jAZ">
-                                            <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -233,6 +233,20 @@
             </objects>
             <point key="canvasLocation" x="3025" y="188"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="T1N-hq-3CI">
+            <objects>
+                <tabBarController id="c94-T9-yKd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="piq-fa-lcT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zor-ff-ZmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-502" y="-696"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ktS-9U-UjX">
             <objects>
@@ -266,7 +280,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="890-ns-Xu5">
-                                            <rect key="frame" x="20" y="0.0" width="379" height="43.666666666666664"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -454,8 +468,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jaq-Tl-jhU"/>
-        <segue reference="d1g-DL-QGa"/>
+        <segue reference="aPe-Zr-Vpc"/>
+        <segue reference="NA6-td-S1D"/>
         <segue reference="12Q-wt-6bo"/>
     </inferredMetricsTieBreakers>
 </document>
