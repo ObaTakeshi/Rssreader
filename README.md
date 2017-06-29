@@ -1,5 +1,4 @@
 # RssReader
-RssReaderです
 iOSアプリです
 
 主な機能
