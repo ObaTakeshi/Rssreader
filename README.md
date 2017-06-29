@@ -1,6 +1,14 @@
 # RssReader
-This is an iOS App.
-You can read article list and article detail.
-You can add RssFeed.
+RssReaderです
+iOSアプリです
 
-This is upgrading now.
+主な機能
+・記事一覧
+・記事内容の閲覧
+・RSSフィードの追加/編集
+・RSSフィードごとのカテゴリー
+・ブックマーク
+
+問題・不具合
+・一度RSSフィード選択画面に遷移するとブックマーク一覧にとべない
+・サムネ画像はRSS1.0のフィードのみに対応
