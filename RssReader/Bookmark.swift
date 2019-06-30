@@ -11,8 +11,8 @@ import RealmSwift
 
 //Realmのテーブル
 class Bookmark: Object {
-    dynamic var title = ""
-    dynamic var detail = ""
-    dynamic var link = ""
-    dynamic var date: NSDate? = nil
+    @objc dynamic var title = ""
+    @objc dynamic var detail = ""
+    @objc dynamic var link = ""
+    @objc dynamic var date: NSDate? = nil
 }

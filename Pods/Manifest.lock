@@ -1,25 +1,32 @@
 PODS:
-  - PySwiftyRegex (1.0.0)
-  - Realm (2.8.0):
-    - Realm/Headers (= 2.8.0)
-  - Realm/Headers (2.8.0)
-  - RealmSwift (2.8.0):
-    - Realm (= 2.8.0)
-  - SDWebImage (4.0.0):
-    - SDWebImage/Core (= 4.0.0)
-  - SDWebImage/Core (4.0.0)
+  - PySwiftyRegex (2.0.1)
+  - Realm (3.17.0):
+    - Realm/Headers (= 3.17.0)
+  - Realm/Headers (3.17.0)
+  - RealmSwift (3.17.0):
+    - Realm (= 3.17.0)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
 
 DEPENDENCIES:
   - PySwiftyRegex
   - RealmSwift
   - SDWebImage
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PySwiftyRegex
+    - Realm
+    - RealmSwift
+    - SDWebImage
+
 SPEC CHECKSUMS:
-  PySwiftyRegex: 9f53cc95dcc4b5c91f050487d6dba3e4aac298ed
-  Realm: 929243ad2b618b3232e70658bedc61110e7563f1
-  RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
-  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  PySwiftyRegex: 18ee6bede93377ce133ca9c1e8cc0446ac988be4
+  Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
+  RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
 
-PODFILE CHECKSUM: ee7b274247410232ac8bb123541ca35add499b06
+PODFILE CHECKSUM: f9d8dfbe43ce2e38a938a4c7acdf2f6bfb0311db
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.7.3

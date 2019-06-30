@@ -21,7 +21,7 @@ class EditFeedController :UITableViewController{
         //Realmインスタンスの取得
         let realm = try! Realm()
         //ブックマーク全件取得
-        feeds = realm.objects(Feed.self).sorted(byProperty: "date", ascending: false)
+        feeds = realm.objects(Feed.self).sorted(byKeyPath: "date", ascending: false)
         
         tableView.reloadData()
     }
@@ -45,14 +45,14 @@ class EditFeedController :UITableViewController{
         return true
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if(editingStyle == UITableViewCellEditingStyle.delete) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCell.EditingStyle.delete) {
             do{
                 let realm = try Realm()
                 try realm.write {
                     realm.delete((feeds?[indexPath.row])!)
                 }
-                tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.fade)
+                tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.fade)
             }catch{
             }
             tableView.reloadData()

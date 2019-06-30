@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Feed: Object {
-    dynamic var name = ""
-    dynamic var url = ""
-    dynamic var date: NSDate? = nil
+    @objc dynamic var name = ""
+    @objc dynamic var url = ""
+    @objc dynamic var date: NSDate? = nil
 }

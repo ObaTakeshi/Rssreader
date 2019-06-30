@@ -25,7 +25,7 @@ class FeedViewController: UITableViewController {
         //Realmインスタンスの取得
         let realm = try! Realm()
         //ブックマーク全件取得
-        feeds = realm.objects(Feed.self).sorted(byProperty: "date", ascending: false)
+        feeds = realm.objects(Feed.self).sorted(byKeyPath: "date", ascending: false)
         
         tableView.reloadData()
     }
